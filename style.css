@@ -560,3 +560,234 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F75129", en
   line-height: 20px;
   margin-bottom: 8px;
 }
+
+
+.fcard p {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #666;
+}
+
+.fcard p.small {
+  font-size: 14px;
+}
+
+.go-corner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  background: hsla(12, 93%, 56%, 1);
+
+  background: linear-gradient(135deg, hsla(12, 93%, 56%, 1) 15%, hsla(228, 53%, 21%, 1) 100%);
+  
+  background: -moz-linear-gradient(135deg, hsla(12, 93%, 56%, 1) 15%, hsla(228, 53%, 21%, 1) 100%);
+  
+  background: -webkit-linear-gradient(135deg, hsla(12, 93%, 56%, 1) 15%, hsla(228, 53%, 21%, 1) 100%);
+  
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F75129", endColorstr="#192452", GradientType=1 );
+  border-radius: 0 4px 0 32px;
+}
+
+.go-arrow {
+  margin-top: -4px;
+  margin-right: -4px;
+  color: white;
+  font-family: courier, sans;
+}
+
+.fcard1 {
+  display: block;
+  position: relative;
+  max-width: 262px;
+  background-color: #f2f8f9;
+  border-radius: 4px;
+  padding: 32px 24px;
+  margin: 12px;
+  text-decoration: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.fcard1:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -16px;
+  right: -16px;
+  background: hsla(12, 93%, 56%, 1);
+
+  background: linear-gradient(135deg, hsla(12, 93%, 56%, 1) 15%, hsla(228, 53%, 21%, 1) 100%);
+  
+  background: -moz-linear-gradient(135deg, hsla(12, 93%, 56%, 1) 15%, hsla(228, 53%, 21%, 1) 100%);
+  
+  background: -webkit-linear-gradient(135deg, hsla(12, 93%, 56%, 1) 15%, hsla(228, 53%, 21%, 1) 100%);
+  
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F75129", endColorstr="#192452", GradientType=1 );
+  height: 32px;
+  width: 32px;
+  border-radius: 32px;
+  transform: scale(1);
+  transform-origin: 50% 50%;
+  transition: transform 0.25s ease-out;
+}
+
+.fcard1:hover:before {
+  transform: scale(21);
+}
+
+.fcard1:hover p {
+  transition: all 0.3s ease-out;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.fcard1:hover h3 {
+  transition: all 0.3s ease-out;
+  color: #fff;
+}
+
+.fcard2 {
+  display: block;
+  top: 0px;
+  position: relative;
+  max-width: 262px;
+  background-color: #f2f8f9;
+  border-radius: 4px;
+  padding: 32px 24px;
+  margin: 12px;
+  text-decoration: none;
+  z-index: 0;
+  overflow: hidden;
+  border: 1px solid #f2f8f9;
+}
+
+.fcard2:hover {
+  transition: all 0.2s ease-out;
+  box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+  top: -4px;
+  border: 1px solid #ccc;
+  background-color: white;
+}
+
+.fcard2:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -16px;
+  right: -16px;
+  background: hsla(12, 93%, 56%, 1);
+
+  background: linear-gradient(135deg, hsla(12, 93%, 56%, 1) 15%, hsla(228, 53%, 21%, 1) 100%);
+  
+  background: -moz-linear-gradient(135deg, hsla(12, 93%, 56%, 1) 15%, hsla(228, 53%, 21%, 1) 100%);
+  
+  background: -webkit-linear-gradient(135deg, hsla(12, 93%, 56%, 1) 15%, hsla(228, 53%, 21%, 1) 100%);
+  
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F75129", endColorstr="#192452", GradientType=1 );
+  height: 32px;
+  width: 32px;
+  border-radius: 32px;
+  transform: scale(2);
+  transform-origin: 50% 50%;
+  transition: transform 0.15s ease-out;
+}
+
+.fcard2:hover:before {
+  transform: scale(2.15);
+}
+
+.fcard3 {
+  display: block;
+  top: 0px;
+  position: relative;
+  max-width: 262px;
+  background-color: #f2f8f9;
+  border-radius: 4px;
+  padding: 32px 24px;
+  margin: 12px;
+  text-decoration: none;
+  overflow: hidden;
+  border: 1px solid #f2f8f9;
+}
+
+.fcard3 .go-corner {
+  opacity: 0.7;
+}
+
+.fcard3:hover {
+  border: 1px solid #00838d;
+  box-shadow: 0px 0px 999px 999px rgba(255, 255, 255, 0.5);
+  z-index: 500;
+}
+
+.fcard3:hover p {
+  color: #00838d;
+}
+
+.fcard3:hover .go-corner {
+  transition: opactiy 0.3s linear;
+  opacity: 1;
+}
+
+.fcard4 {
+  display: block;
+  top: 0px;
+  position: relative;
+  max-width: 262px;
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 32px 24px;
+  margin: 12px;
+  text-decoration: none;
+  overflow: hidden;
+  border: 1px solid #ccc;
+}
+
+.fcard4 .go-corner {
+  background: hsla(12, 93%, 56%, 1);
+
+  background: linear-gradient(135deg, hsla(12, 93%, 56%, 1) 15%, hsla(228, 53%, 21%, 1) 100%);
+  
+  background: -moz-linear-gradient(135deg, hsla(12, 93%, 56%, 1) 15%, hsla(228, 53%, 21%, 1) 100%);
+  
+  background: -webkit-linear-gradient(135deg, hsla(12, 93%, 56%, 1) 15%, hsla(228, 53%, 21%, 1) 100%);
+  
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F75129", endColorstr="#192452", GradientType=1 );
+  height: 100%;
+  width: 16px;
+  padding-right: 9px;
+  border-radius: 0;
+  transform: skew(6deg);
+  margin-right: -36px;
+  align-items: start;
+  background-image: linear-gradient(-45deg, #8f479a 1%, #dc2a74 100%);
+}
+
+.fcard4 .go-arrow {
+  transform: skew(-6deg);
+  margin-left: -2px;
+  margin-top: 9px;
+  opacity: 0;
+}
+
+.fcard4:hover {
+  border: 1px solid #cd3d73;
+}
+
+.fcard4 h3 {
+  margin-top: 8px;
+}
+
+.fcard4:hover .go-corner {
+  margin-right: -12px;
+}
+
+.fcard4:hover .go-arrow {
+  opacity: 1;
+}
