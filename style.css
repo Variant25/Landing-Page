@@ -75,7 +75,7 @@ video {
   position: relative;
 }
 #page1 h1::before {
-  content: "EAT. DRINK. PLAY.";
+  content: "COSPACE SUCCESS";
   position: absolute;
   color: #000;
   top: -5px;
