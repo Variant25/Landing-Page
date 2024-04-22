@@ -14,19 +14,14 @@ body {
 }
 *::selection {
   background-color: #fff;
-  color: orangered;
+  color: #f75129;
 }
 
 body::-webkit-scrollbar {
-  display: block;
-  width: 8px;
-  background: #95c11e;
+  display: none;
+  
 }
-body::-webkit-scrollbar-thumb {
-  background-color: #fff;
 
-  border-radius: 50px;
-}
 body {
   overflow-x: hidden;
 }
@@ -61,7 +56,7 @@ video {
 
 #main {
   position: relative;
-  background-color: rgba(0, 0, 0, 0.39);
+  background-color: ;
 }
 
 #page1 {
@@ -86,7 +81,7 @@ video {
   color: #000;
   top: -5px;
   left: -5px;
-  -webkit-text-stroke: 1.5px #95c11e;
+  -webkit-text-stroke: 1.5px #f75129;
   z-index: -1;
 }
 #page1 h2 {
@@ -104,7 +99,7 @@ video {
   height: 250px;
   width: 250px;
   background-color: transparent;
-  border: 2px solid orangered;
+  border: 2px solid #f75129;
   position: absolute;
   display: flex;
   left: -2%;
@@ -120,13 +115,21 @@ video {
 }
 #page1 #arrow:hover {
   scale: 0.4;
-  background-color: orangered;
+  background-color: #f75129;
 }
 #page2 {
   min-height: 100vh;
   width: 100%;
   z-index: 10;
+  background-color: #000;
 }
+.text{
+  position:relative;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+}
+
 
 #scroller {
   /* background-color: red; */
@@ -159,8 +162,8 @@ video {
   -webkit-text-stroke: 2px #ffffff;
 }
 #scroller h4:hover {
-  color: #95c11e;
-  -webkit-text-stroke: 2px #95c11e;
+  color: #f75129;
+  -webkit-text-stroke: 2px #f75129;
 }
 
 @keyframes scroll {
@@ -235,7 +238,7 @@ video {
 .overlay {
   height: 100%;
   width: 100%;
-  background-color: #95c11e;
+  background-color: #f75129;
   padding: 30px;
   padding-top: 160px;
   opacity: 0;
@@ -266,7 +269,15 @@ video {
   align-items: center;
   justify-content: space-between;
   /* background-color: red; */
-  background: linear-gradient(to left bottom, #119f3a, #ace022);
+  background: hsla(12, 93%, 56%, 1);
+
+background: linear-gradient(135deg, hsla(12, 93%, 56%, 1) 15%, hsla(228, 53%, 21%, 1) 100%);
+
+background: -moz-linear-gradient(135deg, hsla(12, 93%, 56%, 1) 15%, hsla(228, 53%, 21%, 1) 100%);
+
+background: -webkit-linear-gradient(135deg, hsla(12, 93%, 56%, 1) 15%, hsla(228, 53%, 21%, 1) 100%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F75129", endColorstr="#192452", GradientType=1 );
 }
 #green-div h4 {
   width: 45%;
@@ -307,6 +318,7 @@ video {
 #page3 #colon1 {
   left: 15%;
   top: 25%;
+  
 }
 #page3 #colon2 {
   bottom: 30%;
@@ -332,9 +344,17 @@ video {
 .elem h2 {
   height: 100%;
   width: 100%;
-  background-color: #95c11e;
+  background: hsla(12, 93%, 56%, 1);
+
+  background: linear-gradient(135deg, hsla(12, 93%, 56%, 1) 15%, hsla(228, 53%, 21%, 1) 100%);
+  
+  background: -moz-linear-gradient(135deg, hsla(12, 93%, 56%, 1) 15%, hsla(228, 53%, 21%, 1) 100%);
+  
+  background: -webkit-linear-gradient(135deg, hsla(12, 93%, 56%, 1) 15%, hsla(228, 53%, 21%, 1) 100%);
+  
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F75129", endColorstr="#192452", GradientType=1 );
   display: flex;
-  color: #000;
+  color: #fff;
   font-weight: 800;
   align-items: center;
   justify-content: center;
@@ -369,7 +389,16 @@ video {
 #footer {
   height: 40vh;
   width: 100%;
-  background: linear-gradient(to left bottom, #119f3a 0%, #a3d421 80%);
+  background: hsla(12, 93%, 56%, 1);
+
+  background: linear-gradient(135deg, hsla(12, 93%, 56%, 1) 15%, hsla(228, 53%, 21%, 1) 100%);
+  
+  background: -moz-linear-gradient(135deg, hsla(12, 93%, 56%, 1) 15%, hsla(228, 53%, 21%, 1) 100%);
+  
+  background: -webkit-linear-gradient(135deg, hsla(12, 93%, 56%, 1) 15%, hsla(228, 53%, 21%, 1) 100%);
+  
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F75129", endColorstr="#192452", GradientType=1 );
+  color: #fff;
   position: relative;
   display: flex;
   align-items: center;
@@ -399,7 +428,7 @@ video {
   font-size: 1.6vw;
   white-space: nowrap;
   text-transform: uppercase;
-  color: #000;
+  color: #fff;
   font-weight: 900;
   margin-bottom: 8px;
 }
@@ -408,7 +437,7 @@ video {
   font-size: 1.6vw;
   white-space: nowrap;
   text-transform: uppercase;
-  color: #000;
+  color: #fff;
   font-weight: 800;
   margin-bottom: 8px;
 }
@@ -416,7 +445,7 @@ video {
   font-size: 1vw;
   white-space: nowrap;
   text-transform: uppercase;
-  color: #000;
+  color: #fff;
   font-weight: 600;
   line-height: 20px;
   margin-bottom: 8px;
