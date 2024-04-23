@@ -9,6 +9,7 @@
     type="image/x-icon" />
   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="popup.css">
   <link rel="stylesheet" href="responsive.css">
 </head>
 
@@ -44,6 +45,18 @@
       <div id="arrow">
         <i class="ri-arrow-down-line"></i>
       </div>
+      <div id="popup-container">
+        <div id="popup">
+            <img src="https://picsum.photos/id/200/300?grayscale" alt="Grayscale product image" id="promo-image">
+            <h2>Stay Ahead of the Curve</h2>
+            <p>Subscribe to our newsletter for exclusive updates, discounts, and early access to new products.</p>
+            <form id="subscribe-form">
+                <input type="email" name="email" placeholder="Enter your email address" required>
+                <button type="submit">Subscribe Now</button>
+            </form>
+            <a href="#" id="close-btn">Close</a>
+        </div>
+    </div>
     </div>
 
 
@@ -222,10 +235,8 @@
               <input type="checkbox" id="agree">
               <label for="agree">I agree that my data is collected and stored.</label>
             </div>
-<<<<<<< HEAD
           </div>
         </form>
-=======
             <div class="info-item">
                 <i class="fas fa-phone"></i>
                 <p>+1 840 841 25 69</p>
@@ -254,46 +265,6 @@
   </div>
 </form></div>
   </div>
-
-
-
-
-      <div id="footer">
-        <img
-          src="https://eiwgew27fhz.exactdn.com/wp-content/themes/puttosaurus/img/dots-footer.svg"
-          alt=""
-        />
-        <div id="f1">
-          <img src="https://t-hub.co/wp-content/uploads/2023/10/t-hub-logo.png"/>
-        </div>
-        <div id="f2">
-          <h3>TOPTRACER Ranges</h3>
-          <h3>Golf Lessons</h3>
-          <h3>Adventure Golf</h3>
-        </div>
-        <div id="f3">
-          <h3>coffee shop</h3>
-          <h3>LEAGUES</h3>
-          <h3>Contact us</h3>
-        </div>
-        <div id="f4">
-          <h4>
-            A20, SIDCUP BYPASS <br />
-            CHISLEHURST <br />
-            KENT <br />
-            BR7 6RP <br />
-            TEL: 0208 309 0181 <br />
-            GET DIRECTIONS <br />
-          </h4>
-        </div>
->>>>>>> 3a37d1976d489661741403dcf4849ba1714a32ca
-      </div>
-    </div>
-
-
-
-
-
 
 
     <div class="pg-footer">
@@ -452,6 +423,7 @@
       integrity="sha512-IHDCHrefnBT3vOCsvdkMvJF/MCPz/nBauQLzJkupa4Gn4tYg5a6VGyzIrjo6QAUy3We5HFOZUlkUpP0dkgE60A=="
       crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="script.js"></script>
+    <script src="popup.js"></script>
 </body>
 
 </html>
