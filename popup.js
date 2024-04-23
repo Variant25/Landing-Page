@@ -6,7 +6,7 @@ const closeBtn = document.getElementById('close-btn');
 function showPopup() {
   setTimeout(() => {
     popupContainer.style.display = 'flex';
-  }, 8000); 
+  }, 33000); 
 }
 
 

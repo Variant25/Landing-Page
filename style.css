@@ -506,13 +506,16 @@ video {
 }
 
 #page5 {
-  height: 60vh;
+  height: auto;
+  min-height: 60vh;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 20px;
   position: relative;
+  flex-wrap: wrap;
+  padding: 2rem 1rem;
 }
 
 .contact-us {
@@ -538,6 +541,7 @@ video {
   display: flex;
   justify-content: center;
   gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .info-item {
@@ -561,7 +565,8 @@ video {
 form {
   max-width: 800px;
   margin: 0 auto;
-  padding-right: 15rem;
+  padding: 2rem 1rem;
+  padding-right: 10rem;
 }
 
 .form-group {
@@ -601,21 +606,14 @@ textarea {
 }
 
 .btn:hover {
-  background: hsla(12, 93%, 56%, 1);
-
   background: linear-gradient(135deg, hsla(12, 93%, 56%, 1) 15%, hsla(228, 53%, 21%, 1) 100%);
-
-  background: -moz-linear-gradient(135deg, hsla(12, 93%, 56%, 1) 15%, hsla(228, 53%, 21%, 1) 100%);
-
-  background: -webkit-linear-gradient(135deg, hsla(12, 93%, 56%, 1) 15%, hsla(228, 53%, 21%, 1) 100%);
-
-  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#F75129", endColorstr="#192452", GradientType=1);
 }
 
 .checkbox-group {
   display: flex;
   align-items: center;
   margin-top: 1rem;
+  flex-wrap: wrap;
 }
 
 .checkbox-group input[type="checkbox"] {
@@ -623,6 +621,13 @@ textarea {
 }
 
 
+.small{
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #666;
+  padding-left: 1.25rem;
+}
 
 .fcard p {
   font-size: 17px;
@@ -667,8 +672,9 @@ textarea {
 .fcard1 {
   display: block;
   position: relative;
-  max-width: 262px;
-  background-color: #f2f8f9;
+  min-width: 300px;
+ 
+  background-color: #333;
   border-radius: 4px;
   padding: 32px 24px;
   margin: 12px;
@@ -1138,7 +1144,7 @@ a {
 
 
 
-@media (min-width:320px) and (max-width:479px) {
+/*@media (min-width:320px) and (max-width:479px) {
 
 
   .footer-content {
@@ -1172,7 +1178,7 @@ a {
     padding: 40px 15px 1050px;
     position: relative;
   }
-}
+}*/
 
 
 @media (min-width: 760px) {
