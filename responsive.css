@@ -8,13 +8,8 @@
   }
 }
 
-
-
-
 /* General responsive styles */
 @media (max-width: 768px) {
-
- 
 
   #page1 h1 {
     font-size: 8vw;
