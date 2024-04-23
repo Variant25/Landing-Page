@@ -1,0 +1,948 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "montserrat";
+    color: #fff;
+  }
+  
+  html,
+  body {
+    height: 100%;
+    width: 100%;
+  }
+  
+  *::selection {
+    background-color: #fff;
+    color: #f75129;
+  }
+  
+  body::-webkit-scrollbar {
+    display: none;
+  }
+  
+  body {
+    overflow-x: hidden;
+  }
+  
+  /* Responsive adjustments */
+  @media only screen and (max-width: 768px) {
+    /* Example adjustments for smaller screens */
+    body {
+      font-size: 14px; /* Adjust font size */
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    /* Example adjustments for even smaller screens */
+    body {
+      font-size: 12px; /* Further adjust font size */
+    }
+  }
+  
+
+  #nav {
+    height: 10%; /* Adjust height */
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    padding: 0 5%; /* Adjust padding */
+    gap: 2%; /* Adjust gap between items */
+    position: fixed;
+    justify-content: flex-start;
+    z-index: 99;
+  }
+  
+  #nav img {
+    height: 4.5vw; /* Adjust image height using vw */
+  }
+  
+  #nav h4 {
+    text-transform: uppercase; 
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 1.5vw; /* Adjust font size using vw */
+  }
+  
+  /* Additional adjustments for smaller screens */
+  @media only screen and (max-width: 768px) {
+    #nav {
+      padding: 0 3%; /* Adjust padding */
+    }
+    
+    #nav h4 {
+      font-size: 2vw; /* Further adjust font size */
+    }
+  }
+  video {
+    height: 100vh; /* Set video height to 100% of viewport height */
+    width: 100%; /* Set video width to 100% of its container */
+    object-fit: cover; /* Ensure the video covers the entire container */
+    z-index: -1; /* Send the video to the background */
+    position: fixed; /* Fix the video position */
+    top: 0; /* Position the video from the top */
+    left: 0; /* Position the video from the left */
+  }
+  #main {
+    position: relative;
+    /* background-color: ; */
+  }
+  
+  #page1 {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 10;
+  }
+  
+  #page1 h1 {
+    font-size: 7.5vw; /* Responsive font size */
+    font-weight: 900;
+    position: relative;
+  }
+  
+  #page1 h1::before {
+    content: "COSPACE SUCCESS";
+    position: absolute;
+    color: #000;
+    top: -5px;
+    left: -5px;
+    -webkit-text-stroke: 1.5px #f75129;
+    z-index: -1;
+  }
+  
+  #page1 h2 {
+    font-size: 3vw; /* Responsive font size */
+    font-weight: 800;
+    margin-top: 2vw; /* Responsive margin */
+    margin-bottom: 4vw; /* Responsive margin */
+  }
+  
+  #page1 p {
+    font-size: 1.5vw; /* Responsive font size */
+    font-weight: 500;
+    width: 80%; /* Responsive width */
+    max-width: 600px; /* Max width for larger screens */
+  }
+  
+  #page1 #arrow {
+    height: 15vw; /* Responsive height */
+    width: 15vw; /* Responsive width */
+    background-color: transparent;
+    border: 2px solid #f75129;
+    position: absolute;
+    display: flex;
+    left: 2%; /* Adjusted position */
+    bottom: 0%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all ease 0.5s;
+  }
+  
+  #page1 #arrow i {
+    font-size: 3vw; /* Responsive font size */
+    font-weight: 100;
+  }
+  
+  #page1 #arrow:hover {
+    transform: scale(0.8); /* Corrected property name for scaling */
+    background-color: #f75129;
+  }
+  
+  /* Additional adjustments for smaller screens */
+  @media only screen and (max-width: 768px) {
+    #page1 h1 {
+      font-size: 10vw; /* Adjusted font size for smaller screens */
+    }
+    
+    #page1 h2 {
+      font-size: 5vw; /* Adjusted font size for smaller screens */
+      margin-top: 4vw; /* Adjusted margin for smaller screens */
+      margin-bottom: 6vw; /* Adjusted margin for smaller screens */
+    }
+    
+    #page1 p {
+      font-size: 2vw; /* Adjusted font size for smaller screens */
+      width: 90%; /* Adjusted width for smaller screens */
+    }
+    
+    #page1 #arrow {
+      height: 10vw; /* Adjusted height for smaller screens */
+      width: 10vw; /* Adjusted width for smaller screens */
+    }
+    
+    #page1 #arrow i {
+      font-size: 4vw; /* Adjusted font size for smaller screens */
+    }
+  }
+  #page2 {
+    min-height: 100vh;
+    width: 100%;
+    z-index: 10;
+    background-color: #000;
+  }
+  
+  .text {
+    position: relative;
+    color: #fff;
+    font-size: 3vw; /* Responsive font size */
+    font-weight: 600;
+  }
+  
+  /* Additional adjustments for smaller screens */
+  @media only screen and (max-width: 768px) {
+    .text {
+      font-size: 5vw; /* Adjusted font size for smaller screens */
+    }
+  }
+  #scroller {
+    /* background-color: red; */
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+  }
+  
+  #scroller::-webkit-scrollbar {
+    display: none;
+  }
+  
+  #scroller-in {
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 40s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  
+  #scroller h4 {
+    display: inline-block;
+    font-size: 6vw; /* Responsive font size */
+    font-weight: 900;
+    font-family: gilroy;
+    margin-right: 2vw; /* Responsive margin */
+    transition: all linear 0.3s;
+    color: #000;
+    -webkit-text-stroke: 0.1em #ffffff; /* Adjusted stroke thickness */
+  }
+  
+  #scroller h4:hover {
+    color: #f75129;
+    -webkit-text-stroke: 0.1em #f75129; /* Adjusted stroke color */
+  }
+  
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
+  /* Additional adjustments for smaller screens */
+  @media only screen and (max-width: 768px) {
+    #scroller h4 {
+      font-size: 8vw; /* Adjusted font size for smaller screens */
+      margin-right: 4vw; /* Adjusted margin for smaller screens */
+    }
+  }
+  #about-us {
+    height: 40vh;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    padding: 0 5%; /* Adjusted padding */
+    align-items: center;
+    position: relative;
+    z-index: 10;
+    justify-content: space-around;
+  }
+  
+  #about-us img {
+    height: 25vw; /* Responsive height */
+    width: 25vw; /* Responsive width */
+    max-height: 220px; /* Max height for larger screens */
+    max-width: 220px; /* Max width for larger screens */
+    border-radius: 20px;
+    object-fit: cover;
+  }
+  
+  #about-us-in {
+    width: 50%;
+    text-align: center;
+  }
+  
+  #about-us-in h3 {
+    font-size: 7vw; /* Responsive font size */
+    font-weight: 800;
+    margin-bottom: 5vw; /* Responsive margin */
+  }
+  
+  #about-us-in p {
+    font-size: 2vw; /* Responsive font size */
+    line-height: 1.3; /* Adjusted line height */
+  }
+  
+  /* Additional adjustments for smaller screens */
+  @media only screen and (max-width: 768px) {
+    #about-us {
+      padding: 0 3%; /* Adjusted padding for smaller screens */
+    }
+    
+    #about-us img {
+      height: 30vw; /* Adjusted height for smaller screens */
+      width: 30vw; /* Adjusted width for smaller screens */
+      max-height: 200px; /* Max height for smaller screens */
+      max-width: 200px; /* Max width for smaller screens */
+    }
+    
+    #about-us-in h3 {
+      font-size: 5vw; /* Adjusted font size for smaller screens */
+      margin-bottom: 3vw; /* Adjusted margin for smaller screens */
+    }
+    
+    #about-us-in p {
+      font-size: 1.5vw; /* Adjusted font size for smaller screens */
+    }
+  }
+  #cards-container {
+    /* background-color: red; */
+    height: auto; /* Adjusted height to fit content */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5vw; /* Adjusted gap using relative units */
+    position: relative;
+    z-index: 10;
+  }
+  
+  .card {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Adjusted gap using relative units */
+    padding: 1rem;
+    width: 20vw; /* Adjusted width using relative units */
+    min-width: 200px; /* Set minimum width for smaller screens */
+    height: auto;
+    background-color: #f75129;
+    background-image: radial-gradient(
+        circle at 0% 0%,
+        rgb(37, 7, 44) 15%,
+        rgba(0, 0, 0, 0) 75%
+      ),
+      radial-gradient(
+        circle at 100% 100%,
+        rgb(25, 2, 31, 0.9) 15%,
+        rgba(0, 0, 0, 0) 150%
+      ),
+      linear-gradient(
+        135deg,
+        rgba(24, 8, 28, 0) 0%,
+        rgb(65, 48, 143) 50%,
+        rgba(24, 8, 28, 0) 100%
+      );
+    border-radius: 0.5rem;
+  }
+  
+  .card::before {
+    content: "";
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 2rem;
+    height: 2rem;
+    background-color: #f75129;
+    background-image: linear-gradient(
+      0deg,
+      rgb(203, 79, 34) 0%,
+      rgb(178, 110, 46) 75%
+    );
+    border-radius: 9999px;
+    box-shadow: 0 1px 5px 3px rgb(199, 95, 228), 0 0 30px 5px rgb(199, 95, 228);
+  }
+  
+  .card .title {
+    font-size: 1.5vw; /* Adjusted font size using relative units */
+    color: white;
+    font-weight: 600;
+  }
+  
+  .card .pricing {
+    font-size: 2vw; /* Adjusted font size using relative units */
+    color: white;
+    font-weight: 600;
+  }
+  
+  .card .pricing .pricing-time,
+  .card .sub-title {
+    font-size: 1vw; /* Adjusted font size using relative units */
+    color: #fff;
+    font-weight: 500;
+  }
+  
+  .card .list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    font-size: 1vw; /* Adjusted font size using relative units */
+    color: white;
+    font-weight: 500;
+    list-style: none;
+  }
+  
+  .card .list .list-item .check {
+    margin-right: 0.25rem;
+    font-size: 1.5vw; /* Adjusted font size using relative units */
+    color: #f75129;
+    font-weight: 900;
+  }
+  
+  .card .button {
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    margin-top: 1vw; /* Adjusted margin using relative units */
+    padding: 1vw 1.5vw; /* Adjusted padding using relative units */
+    width: 100%;
+    height: fit-content;
+    background: hsla(12, 93%, 56%, 1);
+    background: linear-gradient(135deg, hsla(12, 93%, 56%, 1) 15%, hsla(228, 53%, 21%, 1) 100%);
+    background: -moz-linear-gradient(135deg, hsla(12, 93%, 56%, 1) 15%, hsla(228, 53%, 21%, 1) 100%);
+    background: -webkit-linear-gradient(135deg, hsla(12, 93%, 56%, 1) 15%, hsla(228, 53%, 21%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F75129", endColorstr="#192452", GradientType=1 );
+    font-size: 1vw; /* Adjusted font size using relative units */
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 0.2vw 0.1vw rgb(122, 48, 143); /* Adjusted box-shadow using relative units */
+    transition: all 0.3s cubic-bezier(1, 0, 0, 1);
+  }
+  
+  .card .button .text-button {
+    position: relative;
+    z-index: 10;
+  }
+  
+  .card .button::before,
+  .card .button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease-in-out;
+  }
+  .card .button::before {
+    left: 0;
+    background: hsla(12, 93%, 56%, 1);
+    background: linear-gradient(135deg, hsla(12, 93%, 56%, 1) 15%, hsla(228, 53%, 21%, 1) 100%);
+    background: -moz-linear-gradient(135deg, hsla(12, 93%, 56%, 1) 15%, hsla(228, 53%, 21%, 1) 100%);
+    background: -webkit-linear-gradient(135deg, hsla(12, 93%, 56%, 1) 15%, hsla(228, 53%, 21%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F75129", endColorstr="#192452", GradientType=1 );
+  }
+  .card .button::after {
+    right: 0;
+    background: hsla(12, 93%, 56%, 1);
+    background: linear-gradient(135deg, hsla(12, 93%, 56%, 1) 15%, hsla(228, 53%, 21%, 1) 100%);
+    background: -moz-linear-gradient(135deg, hsla(12, 93%, 56%, 1) 15%, hsla(228, 53%, 21%, 1) 100%);
+    background: -webkit-linear-gradient(135deg, hsla(12, 93%, 56%, 1) 15%, hsla(228, 53%, 21%, 1) 100%);
+    filter: progid:  DXImageTransform.Microsoft.gradient( startColorstr="#F75129", endColorstr="#192452", GradientType=1 );
+}
+
+.card .button:hover {
+  box-shadow: 0px 0px 1vw 0.1vw #f75129; /* Adjusted box-shadow using relative units */
+}
+
+.card .button:hover::before,
+.card .button:hover::after {
+  width: 0;
+  opacity: 0;
+}
+
+/* Additional adjustments for smaller screens */
+@media only screen and (max-width: 768px) {
+  #cards-container {
+    flex-direction: column; /* Adjusted flex direction for smaller screens */
+    gap: 3vw; /* Adjusted gap for smaller screens */
+  }
+  
+  .card {
+    width: 80vw; /* Adjusted width for smaller screens */
+    max-width: 300px; /* Max width for smaller screens */
+    padding: 2vw; /* Adjusted padding for smaller screens */
+  }
+  
+  .card .title {
+    font-size: 4vw; /* Adjusted font size for smaller screens */
+  }
+  
+  .card .pricing {
+    font-size: 5vw; /* Adjusted font size for smaller screens */
+  }
+  
+  .card .pricing .pricing-time,
+  .card .sub-title {
+    font-size: 2vw; /* Adjusted font size for smaller screens */
+  }
+  
+  .card .list {
+    font-size: 2vw; /* Adjusted font size for smaller screens */
+  }
+  
+  .card .list .list-item .check {
+    font-size: 3vw; /* Adjusted font size for smaller screens */
+  }
+  
+  .card .button {
+    font-size: 2vw; /* Adjusted font size for smaller screens */
+    padding: 3vw 4vw; /* Adjusted padding for smaller screens */
+    margin-top: 2vw; /* Adjusted margin for smaller screens */
+    box-shadow: 0px 0px 0.5vw 0.1vw rgb(122, 48, 143); /* Adjusted box-shadow for smaller screens */
+  }
+}
+#green-div {
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: red; */
+    background: hsla(12, 93%, 56%, 1);
+    background: linear-gradient(135deg, hsla(12, 93%, 56%, 1) 15%, hsla(228, 53%, 21%, 1) 100%);
+    background: -moz-linear-gradient(135deg, hsla(12, 93%, 56%, 1) 15%, hsla(228, 53%, 21%, 1) 100%);
+    background: -webkit-linear-gradient(135deg, hsla(12, 93%, 56%, 1) 15%, hsla(228, 53%, 21%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F75129", endColorstr="#192452", GradientType=1 );
+  }
+  
+  #green-div h4 {
+    width: 45%; /* Adjusted width */
+    line-height: 3.5vh; /* Adjusted line height using relative units */
+    color: #000;
+    text-align: center;
+    font-weight: 800;
+    font-size: 3vw; /* Adjusted font size using relative units */
+    text-transform: uppercase;
+  }
+  
+  #green-div img {
+    height: 100%;
+    object-fit: cover;
+    width: 14%; /* Adjusted width using relative units */
+  }
+  
+  /* Additional adjustments for smaller screens */
+  @media only screen and (max-width: 768px) {
+    #green-div {
+      height: auto; /* Adjusted height to fit content */
+      flex-direction: column; /* Adjusted flex direction for smaller screens */
+      justify-content: center; /* Adjusted justify content for smaller screens */
+      padding: 5vw; /* Adjusted padding using relative units */
+    }
+  
+    #green-div h4 {
+      width: 100%; /* Adjusted width for smaller screens */
+      line-height: 1.5; /* Adjusted line height for smaller screens */
+      font-size: 5vw; /* Adjusted font size for smaller screens */
+      margin-bottom: 5vw; /* Adjusted margin using relative units */
+    }
+  
+    #green-div img {
+      width: 30%; /* Adjusted width for smaller screens */
+      margin-bottom: 5vw; /* Adjusted margin using relative units */
+    }
+  }
+  #page3 {
+    height: auto; /* Adjusted height to fit content */
+    min-height: 100vh; /* Set minimum height for smaller screens */
+    width: 100%;
+    background-color: #000;
+    display: flex;
+    flex-direction: column; /* Adjusted flex direction */
+    align-items: center;
+    position: relative;
+    justify-content: center;
+  }
+  
+  #page3 > p {
+    font-size: 4vw; /* Adjusted font size using relative units */
+    font-weight: 700;
+    width: 80%; /* Adjusted width */
+    max-width: 800px; /* Max width for larger screens */
+    line-height: 5vw; /* Adjusted line height using relative units */
+    text-align: center;
+  }
+  
+  #page3 img {
+    position: absolute;
+    height: 6vw; /* Adjusted height using relative units */
+  }
+  
+  #page3 #colon1 {
+    left: 10%; /* Adjusted position using relative units */
+    top: 10%; /* Adjusted position using relative units */
+  }
+  
+  #page3 #colon2 {
+    bottom: 10%; /* Adjusted position using relative units */
+    right: 10%; /* Adjusted position using relative units */
+  }
+  
+  /* Additional adjustments for smaller screens */
+  @media only screen and (max-width: 768px) {
+    #page3 {
+      padding: 5vw; /* Adjusted padding using relative units */
+    }
+  
+    #page3 > p {
+      font-size: 6vw; /* Adjusted font size for smaller screens */
+      line-height: 7vw; /* Adjusted line height for smaller screens */
+    }
+  
+    #page3 img {
+      height: 10vw; /* Adjusted height for smaller screens */
+    }
+  
+    #page3 #colon1 {
+      left: 5%; /* Adjusted position for smaller screens */
+      top: 5%; /* Adjusted position for smaller screens */
+    }
+  
+    #page3 #colon2 {
+      bottom: 5%; /* Adjusted position for smaller screens */
+      right: 5%; /* Adjusted position for smaller screens */
+    }
+  }
+  #page4 {
+    height: auto; /* Adjusted height to fit content */
+    min-height: 30vh; /* Set minimum height for smaller screens */
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Adjusted flex direction */
+    align-items: center;
+    justify-content: center;
+    gap: 5vw; /* Adjusted gap using relative units */
+    position: relative;
+  }
+  
+  /* Additional adjustments for smaller screens */
+  @media only screen and (max-width: 768px) {
+    #page4 {
+      padding: 5vw; /* Adjusted padding using relative units */
+    }
+  
+    #page4 > * {
+      margin-bottom: 5vw; /* Adjusted margin between elements using relative units */
+    }
+  }
+  .elem {
+    height: 70%; /* Adjusted height using relative units */
+    width: 26%; /* Adjusted width using relative units */
+    overflow: hidden;
+    border-radius: 20px;
+    position: relative;
+  }
+  
+  .elem h2 {
+    height: 100%;
+    width: 100%;
+    background: hsla(12, 93%, 56%, 1);
+    background: linear-gradient(135deg, hsla(12, 93%, 56%, 1) 15%, hsla(228, 53%, 21%, 1) 100%);
+    background: -moz-linear-gradient(135deg, hsla(12, 93%, 56%, 1) 15%, hsla(228, 53%, 21%, 1) 100%);
+    background: -webkit-linear-gradient(135deg, hsla(12, 93%, 56%, 1) 15%, hsla(228, 53%, 21%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F75129", endColorstr="#192452", GradientType=1 );
+    display: flex;
+    color: #fff;
+    font-weight: 800;
+    align-items: center;
+    justify-content: center;
+    transition: all ease 0.5s;
+    font-size: 2vw; /* Adjusted font size using relative units */
+    position: absolute;
+    z-index: 10;
+  }
+  
+  .elem img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all ease 0.5s;
+    transform: scale(1.1); /* Adjusted initial scale */
+  }
+  
+  .elem:hover h2 {
+    color: #fff;
+    background-color: transparent;
+  }
+  
+  .elem:hover img {
+    transform: scale(1); /* Adjusted scale on hover */
+  }
+  #page4 h1 {
+    font-size: 6.4vw; /* Adjusted font size using relative units */
+    position: absolute;
+    top: -15%; /* Adjusted position using relative units */
+    font-weight: 900;
+    font-family: gilroy;
+    color: #000;
+    -webkit-text-stroke: 0.1em #fff; /* Adjusted text stroke */
+  }
+  
+  /* Additional adjustments for smaller screens */
+  @media only screen and (max-width: 768px) {
+    #page4 h1 {
+      font-size: 8vw; /* Adjusted font size for smaller screens */
+      top: -10%; /* Adjusted position for smaller screens */
+    }
+  }
+  #footer {
+    height: auto; /* Adjusted height to fit content */
+    min-height: 40vh; /* Set minimum height for smaller screens */
+    width: 100%;
+    background: hsla(12, 93%, 56%, 1);
+    background: linear-gradient(135deg, hsla(12, 93%, 56%, 1) 15%, hsla(228, 53%, 21%, 1) 100%);
+    background: -moz-linear-gradient(135deg, hsla(12, 93%, 56%, 1) 15%, hsla(228, 53%, 21%, 1) 100%);
+    background: -webkit-linear-gradient(135deg, hsla(12, 93%, 56%, 1) 15%, hsla(228, 53%, 21%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F75129", endColorstr="#192452", GradientType=1 );
+    color: #fff;
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Adjusted flex direction */
+    align-items: center; /* Adjusted alignment */
+    justify-content: flex-start;
+    gap: 5vw; /* Adjusted gap using relative units */
+    padding: 0 10%; /* Adjusted padding using relative units */
+  }
+  
+  #footer > img {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    z-index: 0;
+  }
+  
+  #f1 img {
+    height: 10vw; /* Adjusted height using relative units */
+  }
+  
+  #f1,
+  #f2,
+  #f3,
+  #f4 {
+    width: fit-content;
+    position: relative;
+    z-index: 99;
+  }
+  
+  #f2 h3,
+  #f3 h3 {
+    font-size: 1.6vw; /* Adjusted font size using relative units */
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 900;
+    margin-bottom: 8px;
+  }
+  
+  #f4 h4 {
+    font-size: 1.2vw; /* Adjusted font size using relative units */
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 600;
+    line-height: 1.5; /* Adjusted line height */
+    margin-bottom: 8px;
+  }
+  
+  /* Additional adjustments for smaller screens */
+  @media only screen and (max-width: 768px) {
+    #footer {
+      padding: 5vw; /* Adjusted padding for smaller screens */
+    }
+  
+    #f1 img {
+      height: 15vw; /* Adjusted height for smaller screens */
+    }
+  
+    #f2 h3,
+    #f3 h3 {
+      font-size: 3vw; /* Adjusted font size for smaller screens */
+    }
+  
+    #f4 h4 {
+      font-size: 2vw; /* Adjusted font size for smaller screens */
+    }
+  }
+  #footer {
+    height: auto; /* Adjusted height to fit content */
+    min-height: 40vh; /* Set minimum height for smaller screens */
+    width: 100%;
+    background: hsla(12, 93%, 56%, 1);
+    background: linear-gradient(135deg, hsla(12, 93%, 56%, 1) 15%, hsla(228, 53%, 21%, 1) 100%);
+    background: -moz-linear-gradient(135deg, hsla(12, 93%, 56%, 1) 15%, hsla(228, 53%, 21%, 1) 100%);
+    background: -webkit-linear-gradient(135deg, hsla(12, 93%, 56%, 1) 15%, hsla(228, 53%, 21%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F75129", endColorstr="#192452", GradientType=1 );
+    color: #fff;
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Adjusted flex direction */
+    align-items: center; /* Adjusted alignment */
+    justify-content: flex-start;
+    gap: 3vw; /* Adjusted gap using relative units */
+    padding: 5vh 10%; /* Adjusted padding using relative units */
+  }
+  
+  #footer > img {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    z-index: 0;
+  }
+  
+  #f1 img {
+    height: 10vw; /* Adjusted height using relative units */
+  }
+  
+  #f1,
+  #f2,
+  #f3,
+  #f4 {
+    width: fit-content;
+    position: relative;
+    z-index: 99;
+  }
+  
+  #f2 h3,
+  #f3 h3 {
+    font-size: 2vw; /* Adjusted font size using relative units */
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 900;
+    margin-bottom: 8px;
+  }
+  
+  #f3 h3 {
+    font-weight: 800; /* Adjusted font weight */
+  }
+  
+  #f4 h4 {
+    font-size: 1.2vw; /* Adjusted font size using relative units */
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 600;
+    line-height: 1.5; /* Adjusted line height */
+    margin-bottom: 8px;
+  }
+  
+  /* Additional adjustments for smaller screens */
+  @media only screen and (max-width: 768px) {
+    #footer {
+      padding: 10vw 5vw; /* Adjusted padding for smaller screens */
+    }
+  
+    #f1 img {
+      height: 15vw; /* Adjusted height for smaller screens */
+    }
+  
+    #f2 h3,
+    #f3 h3 {
+      font-size: 3vw; /* Adjusted font size for smaller screens */
+    }
+  
+    #f4 h4 {
+      font-size: 2vw; /* Adjusted font size for smaller screens */
+    }
+  }
+  .fcard {
+    position: relative;
+    max-width: 262px;
+    background-color: #f2f8f9;
+    border-radius: 4px;
+    padding: 5% 3%;
+    margin: 3%;
+    text-decoration: none;
+    overflow: hidden;
+    z-index: 0;
+  }
+  
+  .fcard p {
+    font-size: 1vw; /* Adjusted font size using relative units */
+    font-weight: 400;
+    line-height: 1.2; /* Adjusted line height */
+    color: #666;
+  }
+  
+  .fcard p.small {
+    font-size: 0.8vw; /* Adjusted font size for smaller text using relative units */
+  }
+  
+  .go-corner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 5%; /* Adjusted width using relative units */
+    height: 5%; /* Adjusted height using relative units */
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    background: hsla(12, 93%, 56%, 1);
+    background: linear-gradient(135deg, hsla(12, 93%, 56%, 1) 15%, hsla(228, 53%, 21%, 1) 100%);
+    background: -moz-linear-gradient(135deg, hsla(12, 93%, 56%, 1) 15%, hsla(228, 53%, 21%, 1) 100%);
+    background: -webkit-linear-gradient(135deg, hsla(12, 93%, 56%, 1) 15%, hsla(228, 53%, 21%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F75129", endColorstr="#192452", GradientType=1 );
+    border-radius: 0 4px 0 32px;
+  }
+  
+  .go-arrow {
+    margin-top: -4px;
+    margin-right: -4px;
+    color: white;
+    font-family: courier, sans;
+  }
+  
+  .fcard:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -10%;
+    right: -10%;
+    background: hsla(12, 93%, 56%, 1);
+    background: linear-gradient(135deg, hsla(12, 93%, 56%, 1) 15%, hsla(228, 53%, 21%, 1) 100%);
+    background: -moz-linear-gradient(135deg, hsla(12, 93%, 56%, 1) 15%, hsla(228, 53%, 21%, 1) 100%);
+    background: -webkit-linear-gradient(135deg, hsla(12, 93%, 56%, 1) 15%, hsla(228, 53%, 21%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F75129", endColorstr="#192452", GradientType=1 );
+    height: 20%; /* Adjusted height using relative units */
+    width: 20%; /* Adjusted width using relative units */
+    border-radius: 50%;
+    transform: scale(1);
+    transform-origin: 50% 50%;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .fcard:hover:before {
+    transform: scale(2);
+  }
+  
+  .fcard:hover p {
+    transition: all 0.3s ease-out;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .fcard:hover h3 {
+    transition: all 0.3s ease-out;
+    color: #fff;
+  }
+  
