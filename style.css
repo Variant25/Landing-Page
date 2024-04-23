@@ -333,7 +333,7 @@ video {
   width: 14%;
 }
 
-/***************  Image  slider ********************/ 
+/***************  Image  slider ********************/
 .slider {
   width: 100%;
   height: 600px;
@@ -1142,11 +1142,11 @@ a {
 
 
   .footer-content {
-      margin-left: auto;
-      margin-right: auto;
-      max-width: 1230px;
-      padding: 40px 15px 1050px;
-      position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1230px;
+    padding: 40px 15px 1050px;
+    position: relative;
   }
 }
 
@@ -1154,11 +1154,11 @@ a {
 
 
   .footer-content {
-      margin-left: auto;
-      margin-right: auto;
-      max-width: 1230px;
-      padding: 40px 15px 1050px;
-      position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1230px;
+    padding: 40px 15px 1050px;
+    position: relative;
   }
 }
 
@@ -1166,29 +1166,29 @@ a {
 
 
   .footer-content {
-      margin-left: auto;
-      margin-right: auto;
-      max-width: 1230px;
-      padding: 40px 15px 1050px;
-      position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1230px;
+    padding: 40px 15px 1050px;
+    position: relative;
   }
 }
 
 
 @media (min-width: 760px) {
   .footer-content {
-      margin-left: auto;
-      margin-right: auto;
-      max-width: 1230px;
-      padding: 40px 15px 450px;
-      position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1230px;
+    padding: 40px 15px 450px;
+    position: relative;
   }
 
   .footer-wave-svg {
-      height: 50px;
+    height: 50px;
   }
 
   .footer-content-column {
-      width: 24.99%;
+    width: 24.99%;
   }
 }
