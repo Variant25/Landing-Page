@@ -168,6 +168,7 @@
   }
 
   .footer-social-link {
+    padding-bottom:15px;
     position: static;
     display: inline-block;
     margin-right: 10px;
@@ -175,6 +176,8 @@
 
   .footer-copyright {
     padding: 15px;
+    
+    padding-left: 3rem;
   }
 }
 
