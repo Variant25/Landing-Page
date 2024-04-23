@@ -115,7 +115,7 @@
     top: -5%;
   }
 
-  #footer {
+   /* #footer {
     height: auto;
     flex-wrap: wrap;
     padding: 50px 20px;
@@ -129,5 +129,5 @@
 
   #f4 h4 {
     font-size: 3vw;
-  }
-}
+  } */
+} 
